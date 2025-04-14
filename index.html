@@ -5,7 +5,41 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Weeb</title>
 		<link rel="stylesheet" href="./styles/main.css">
+		<script src="./scripts/main.js" type="module"></script>
 	</head>
 	<body>
+		<div class="overlay" data-overlay></div>
+		<header class="navbar">
+			<div class="container">
+				<div class="navbar-body">
+					<a class="navbar-brand" href="#">weeb</a>
+					<div class="navbar-menu" data-navbar-menu>
+						<nav id="navbar-content" class="navbar-nav">
+							<ul class="nav-list">
+								<li>
+									<a href="#">About Us</a>
+								</li>
+								<li>
+									<a href="#">Solutions</a>
+								</li>
+								<li>
+									<a href="#">Pricing</a>
+								</li>
+								<li>
+									<a href="#">Resources</a>
+								</li>
+							</ul>
+						</nav>
+						<div class="nav-actions">
+							<button class="button button-transparent" type="button">Log In</button>
+							<button class="button button-primary" type="button">Join Now</button>
+						</div>
+					</div>
+					<button class="navbar-toggle-button" type="button" aria-label="Toggle navigation" aria-controls="navbar-content" aria-expanded="false" data-navbar-toggle-button>
+						<span></span>
+					</button>
+				</div>
+			</div>
+		</header>
 	</body>
 </html>
