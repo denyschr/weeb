@@ -4,6 +4,13 @@
 	box-sizing: border-box;
 }
 
+* {
+	margin: 0;
+	padding: 0;
+	border: none;
+	font: inherit;
+}
+
 html:focus-within {
 	scroll-behavior: smooth;
 }
@@ -11,16 +18,7 @@ html:focus-within {
 html, body {
 	width: 100%;
 	height: 100%;
-	padding: 0;
 	overflow-x: hidden;
-}
-
-body {
-	margin: 0;
-}
-
-:where(h1, h2, h3, h4, h5, h6, p)[class] {
-	margin-block: 0;
 }
 
 h1,
@@ -46,17 +44,12 @@ p {
 	text-wrap: pretty;
 }
 
-:where(ol, ul, li)[class] {
+ol, ul, li {
 	list-style: none;
-	margin: 0;
-	padding: 0;
-}
-
-a:where([class]) {
-	display: inline-block;
 }
 
 a {
+	display: inline-block;
 	text-decoration: none;
 	color: inherit;
 }
@@ -74,8 +67,6 @@ img {
 }
 
 button {
-	padding: 0;
-	border: none;
 	background-color: transparent;
 	outline: transparent;
 	cursor: pointer;
@@ -85,7 +76,6 @@ input,
 textarea,
 select,
 button {
-	font: inherit;
 	color: inherit;
 }
 
