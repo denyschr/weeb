@@ -84,10 +84,6 @@ body {
   margin-bottom: var(--flow-spacing, var(--spacing-lg));
 }
 
-.margin-inline-auto {
-  margin-inline: auto;
-}
-
 .margin-bottom-80 {
   margin-bottom: clamp(var(--spacing-lg), 6vw, var(--spacing-3xl));
 }
@@ -192,6 +188,9 @@ h6,
   line-height: 1;
   letter-spacing: 0.188rem;
   text-transform: uppercase;
+  &:not(:last-child) {
+    margin-bottom: var(--spacing-base);
+  }
 }
 
 /* Buttons */
@@ -243,6 +242,27 @@ h6,
   padding-block: clamp(0.75rem, 3vw, 1rem);
   padding-inline: clamp(1rem, 4vw, 2.5rem);
   font-size: clamp(var(--text-size-base), 2vw, var(--text-size-lg));
+}
+
+.button-link-arrow {
+  display: inline-flex;
+  gap: var(--spacing-base);
+  padding-inline: 0;
+  white-space: normal;
+  @media (any-hover: hover) {
+    &:hover {
+      color: var(--color-primary-400);
+      > svg {
+        translate: -0.5rem 0;
+      }
+    }
+  }
+
+  > svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    transition: translate 0.2s ease-in-out;
+  }
 }
 
 /* Badges */
@@ -306,6 +326,8 @@ h6,
   align-items: center;
   justify-content: space-between;
   column-gap: clamp(1.25rem, 3vw, 2.875rem);
+  max-width: 62.5rem;
+  margin-inline: auto;
   padding: clamp(var(--spacing-xs), 2vw, var(--spacing-md));
   border-radius: var(--radius-3xl);
   background-color: var(--color-neutral-800);
@@ -412,7 +434,8 @@ h6,
 /* Hero */
 
 .hero-text {
-  max-width: 75ch;
+  max-width: 50rem;
+  margin-inline: auto;
 }
 
 .hero-actions {
@@ -423,6 +446,7 @@ h6,
 }
 
 .hero-image {
+  margin-inline: auto;
   box-shadow: 0 1.563rem 3.125rem -0.75rem rgba(var(--color-dark-rgb), 0.25),
     0 0 0.938rem 0 rgba(var(--color-dark-rgb), 0.07);
 }
@@ -440,6 +464,20 @@ h6,
     align-items: center;
     gap: var(--spacing-xs);
   }
+}
+
+/* Discover */
+
+.discover {
+  > .container {
+    display: grid;
+    grid-template-columns: 1fr 29.296875%;
+    gap: clamp(var(--spacing-lg), 5vw, var(--spacing-3xl));
+  }
+}
+
+.discover-text {
+  max-width: 38.75rem;
 }
 
 @media (min-width: 48em) {
@@ -484,6 +522,19 @@ h6,
 
   .nav-actions {
     justify-content: center;
+  }
+
+  .discover {
+    > .container {
+      grid-template-columns: auto;
+      justify-items: center;
+      text-align: center;
+    }
+  }
+
+  .discover-image {
+    order: -1;
+    max-width: 13.75rem;
   }
 }
 
