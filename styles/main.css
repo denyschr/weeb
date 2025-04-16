@@ -108,6 +108,21 @@ body {
   color: var(--color-primary-600);
 }
 
+.highlight-box {
+  display: inline-block;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -5%;
+    z-index: -1;
+    width: 98%;
+    height: 95%;
+    border: 5px solid var(--color-orange);
+  }
+}
+
 /* Overlay */
 
 .overlay {
@@ -431,7 +446,7 @@ h6,
   }
 }
 
-/* Hero */
+/* Hero section */
 
 .hero-text {
   max-width: 50rem;
@@ -451,7 +466,7 @@ h6,
     0 0 0.938rem 0 rgba(var(--color-dark-rgb), 0.07);
 }
 
-/* Companies */
+/* Companies section */
 
 .companies-list {
   display: flex;
@@ -466,7 +481,7 @@ h6,
   }
 }
 
-/* Discover */
+/* Discover section */
 
 .discover {
   > .container {
@@ -480,6 +495,26 @@ h6,
   max-width: 38.75rem;
 }
 
+/* Feature section */
+
+.feature {
+  > .container {
+    display: grid;
+    grid-template-columns: 35.15625% 1fr;
+    gap: clamp(var(--spacing-lg), 5vw, var(--spacing-3xl));
+    > .flow {
+      align-self: center;
+    }
+  }
+}
+
+.feature-image {
+  > img {
+    box-shadow: 0 1.25rem 1.563rem -0.313rem rgba(0, 0, 0, 0.1),
+      0 0 0.625rem 0 rgba(0, 0, 0, 0.07);
+  }
+}
+
 @media (min-width: 48em) {
   .navbar-menu {
     display: contents;
@@ -491,6 +526,12 @@ h6,
 }
 
 @media (max-width: 47.99875em) {
+  .highlight-box {
+    &::before {
+      border-width: 3px;
+    }
+  }
+
   .navbar-menu {
     --menu-offset-top: 6.875rem;
 
@@ -524,7 +565,8 @@ h6,
     justify-content: center;
   }
 
-  .discover {
+  .discover,
+  .feature {
     > .container {
       grid-template-columns: auto;
       justify-items: center;
@@ -532,8 +574,12 @@ h6,
     }
   }
 
-  .discover-image {
+  .discover-image,
+  .feature-image {
     order: -1;
+  }
+
+  .discover-image {
     max-width: 13.75rem;
   }
 }
