@@ -12,10 +12,10 @@
     <header class="navbar">
       <div class="container">
         <div class="navbar-body">
-          <a class="navbar-brand" href="#">weeb</a>
+          <a class="logo" href="#">weeb</a>
           <div class="navbar-menu" data-navbar-menu>
             <nav id="navbar-content" class="navbar-nav">
-              <ul class="nav-list">
+              <ul class="nav-list" aria-label="Primary">
                 <li>
                   <a href="#">About Us</a>
                 </li>
@@ -54,10 +54,10 @@
     </header>
 
     <main>
-      <section class="hero | padding-block-80" aria-labelledby="hero-title">
+      <section class="hero | padding-block-80" aria-labelledby="hero-heading">
         <div class="container">
           <div class="flow margin-bottom-80 text-center">
-            <h1 id="hero-title">
+            <h1 id="hero-heading">
               Design <span class="underline">Faster</span>
               <span class="text-primary-600">&</span>
               <span class="overline">Better</span>
@@ -91,9 +91,14 @@
         </div>
       </section>
 
-      <section class="companies | padding-block-80">
+      <section
+        class="companies | padding-block-80"
+        aria-labelledby="companies-heading"
+      >
         <div class="container">
-          <h2 class="margin-bottom-80 text-center">Join Leading Companies</h2>
+          <h2 id="companies-heading" class="margin-bottom-80 text-center">
+            Join Leading Companies
+          </h2>
           <ul class="companies-list" role="presentation">
             <li>
               <img
@@ -122,11 +127,14 @@
         </div>
       </section>
 
-      <section class="discover | padding-block-80">
+      <section
+        class="discover | padding-block-80"
+        aria-labelledby="discover-heading"
+      >
         <div class="container">
           <div class="flow">
             <span class="caption">Discover</span>
-            <h2 class="heading-1">
+            <h2 id="discover-heading" class="heading-1">
               <span class="text-primary-400">Unlimited</span>
               <span class="highlight-border-box">ideas</span> for your next
               great projects
@@ -140,7 +148,7 @@
             </div>
             <a class="button button-link-arrow button-large" href="#">
               Discover Ideas
-              <svg>
+              <svg aria-hidden="true">
                 <use href="assets/icons/icons.svg#arrow-right" />
               </svg>
             </a>
@@ -157,11 +165,14 @@
         </div>
       </section>
 
-      <section class="feature | padding-block-80">
+      <section
+        class="feature | padding-block-80"
+        aria-labelledby="feature-heading"
+      >
         <div class="container">
           <div class="flow">
             <span class="caption">Powerful</span>
-            <h2>All the tools you can imagine</h2>
+            <h2 id="feature-heading">All the tools you can imagine</h2>
             <div>
               <p>
                 Scelerisque auctor dolor diam tortor, fames faucibus non
@@ -181,11 +192,14 @@
         </div>
       </section>
 
-      <section class="customer-targeting | padding-block-80">
+      <section
+        class="customer-targeting | padding-block-80"
+        aria-labelledby="customer-targeting-heading"
+      >
         <div class="container">
           <div class="flow">
             <span class="caption">Customers</span>
-            <h2 class="heading-1">
+            <h2 id="customer-targeting-heading" class="heading-1">
               <span class="text-primary-400">Target</span>
               <span class="highlight-block">customers</span> with our powerful
               AI kit
@@ -199,7 +213,7 @@
             </div>
             <a class="button button-link-arrow button-large" href="#">
               How Targeting Customers Works
-              <svg>
+              <svg aria-hidden="true">
                 <use href="assets/icons/icons.svg#arrow-right" />
               </svg>
             </a>
@@ -216,11 +230,14 @@
         </div>
       </section>
 
-      <section class="performance | padding-block-80">
+      <section
+        class="performance | padding-block-80"
+        aria-labelledby="performance-heading"
+      >
         <div class="container">
           <div class="flow">
             <span class="caption">Speed</span>
-            <h2>Work fast, w/o interruptions</h2>
+            <h2 id="performance-heading">Work fast, w/o interruptions</h2>
             <div>
               <p>
                 Scelerisque auctor dolor diam tortor, fames faucibus non
@@ -240,14 +257,19 @@
         </div>
       </section>
 
-      <section class="testimonials | padding-block-80">
+      <section
+        class="testimonials | padding-block-80"
+        aria-labelledby="testimonials-heading"
+      >
         <div class="container">
           <div class="flow">
             <span class="caption">Testimonials</span>
-            <h2><span class="underline">Bigapp</span> got to the next level</h2>
+            <h2 id="testimonials-heading">
+              <span class="underline">Bigapp</span> got to the next level
+            </h2>
             <a class="button button-link-arrow" href="#">
               View Case Study
-              <svg>
+              <svg aria-hidden="true">
                 <use href="assets/icons/icons.svg#arrow-right" />
               </svg>
             </a>
@@ -281,10 +303,13 @@
         </div>
       </section>
 
-      <section class="events | padding-block-80">
+      <section
+        class="events | padding-block-80"
+        aria-labelledby="events-heading"
+      >
         <div class="container">
           <div class="events-header">
-            <h2>Design events near your</h2>
+            <h2 id="events-heading">Design events near your</h2>
             <a class="button button-link-arrow" href="#">
               Explore Events
               <svg>
@@ -313,7 +338,7 @@
                   </div>
                   <a class="button button-link-arrow" href="#">
                     Buy Tickets
-                    <svg>
+                    <svg aria-hidden="true">
                       <use href="assets/icons/icons.svg#arrow-right" />
                     </svg>
                   </a>
@@ -341,7 +366,7 @@
                   </div>
                   <a class="button button-link-arrow" href="#">
                     Buy Tickets
-                    <svg>
+                    <svg aria-hidden="true">
                       <use href="assets/icons/icons.svg#arrow-right" />
                     </svg>
                   </a>
@@ -369,7 +394,7 @@
                   </div>
                   <a class="button button-link-arrow" href="#">
                     Buy Tickets
-                    <svg>
+                    <svg aria-hidden="true">
                       <use href="assets/icons/icons.svg#arrow-right" />
                     </svg>
                   </a>
@@ -380,5 +405,130 @@
         </div>
       </section>
     </main>
+
+    <footer class="footer" aria-labelledby="footer-heading">
+      <h2 id="footer-heading" class="visually-hidden">Footer</h2>
+      <div class="container">
+        <div class="footer-body">
+          <div>
+            <a class="logo" href="#">weeb</a>
+          </div>
+          <nav class="footer-nav" aria-label="Secondary">
+            <ul class="footer-nav-list">
+              <li>
+                <h3>Product</h3>
+                <ul>
+                  <li>
+                    <a href="#">Pricing</a>
+                  </li>
+                  <li>
+                    <a href="#">Overview</a>
+                  </li>
+                  <li>
+                    <a href="#">Browse</a>
+                  </li>
+                  <li>
+                    <a href="#">Accessibility</a>
+                  </li>
+                  <li>
+                    <a href="#">Five</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <h3>Solutions</h3>
+                <ul>
+                  <li>
+                    <a href="#">Brainstorming</a>
+                  </li>
+                  <li>
+                    <a href="#">Ideation</a>
+                  </li>
+                  <li>
+                    <a href="#">Wireframing</a>
+                  </li>
+                  <li>
+                    <a href="#">Research</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <h3>Resources</h3>
+                <ul>
+                  <li>
+                    <a href="#">Help Center</a>
+                  </li>
+                  <li>
+                    <a href="#">Blog</a>
+                  </li>
+                  <li>
+                    <a href="#">Tutorials</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <h3>Company</h3>
+                <ul>
+                  <li>
+                    <a href="#">About</a>
+                  </li>
+                  <li>
+                    <a href="#">Press</a>
+                  </li>
+                  <li>
+                    <a href="#">Events</a>
+                  </li>
+                  <li>
+                    <a href="#">Careers</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="footer-extra">
+          <small class="copyright"
+            >@ 2023 Weeb, Inc. All rights reserved.</small
+          >
+          <ul class="social-list" aria-label="Socials">
+            <li>
+              <a class="social-item" href="#" aria-label="YouTube">
+                <svg aria-hidden="true">
+                  <use href="assets/icons/icons.svg#youtube" />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a class="social-item" href="#" aria-label="Facebook">
+                <svg aria-hidden="true">
+                  <use href="assets/icons/icons.svg#facebook" />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a class="social-item" href="#" aria-label="Twitter">
+                <svg aria-hidden="true">
+                  <use href="assets/icons/icons.svg#twitter" />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a class="social-item" href="#" aria-label="Instagram">
+                <svg aria-hidden="true">
+                  <use href="assets/icons/icons.svg#instagram" />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a class="social-item" href="#" aria-label="LinkedIn">
+                <svg aria-hidden="true">
+                  <use href="assets/icons/icons.svg#linkedin" />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
