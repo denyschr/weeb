@@ -1,3 +1,4 @@
+const navbar = document.querySelector("[data-navbar]");
 const navbarMenu = document.querySelector("[data-navbar-menu]");
 const navbarToggleButton = document.querySelector(
   "[data-navbar-toggle-button]"
@@ -16,3 +17,16 @@ function toggleMenu() {
 
 navbarToggleButton.addEventListener("click", toggleMenu);
 overlay.addEventListener("click", toggleMenu);
+
+const navbarHeight = navbar.offsetHeight;
+let previousScrollPosition = window.scrollY;
+
+document.addEventListener("scroll", () => {
+  const currentScrollPosition = window.scrollY;
+  if (previousScrollPosition > currentScrollPosition) {
+    document.querySelector("[data-navbar]").style.top = "0";
+  } else if (currentScrollPosition > navbarHeight) {
+    document.querySelector("[data-navbar]").style.top = `-${navbarHeight}px`;
+  }
+  previousScrollPosition = currentScrollPosition;
+});
