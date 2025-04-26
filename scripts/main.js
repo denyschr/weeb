@@ -1,3 +1,5 @@
+import { debounce } from "./helpers.js";
+
 const navbar = document.querySelector("[data-navbar]");
 const navbarMenu = document.querySelector("[data-navbar-menu]");
 const navbarToggleButton = document.querySelector(
@@ -17,6 +19,21 @@ function toggleMenu() {
 
 navbarToggleButton.addEventListener("click", toggleMenu);
 overlay.addEventListener("click", toggleMenu);
+
+window.addEventListener(
+  "resize",
+  debounce(() => {
+    if (window.innerWidth >= 768) {
+      document.body.classList.remove("lock");
+      overlay.classList.remove("active");
+      navbarMenu.classList.contains("open")
+        ? navbarToggleButton.setAttribute("aria-expanded", "false")
+        : navbarToggleButton.setAttribute("aria-expanded", "true");
+      navbarMenu.classList.remove("open");
+      navbarToggleButton.classList.remove("active");
+    }
+  })
+);
 
 const navbarHeight = navbar.offsetHeight;
 let previousScrollPosition = window.scrollY;
