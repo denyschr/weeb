@@ -1,14 +1,15 @@
 import { debounce } from "./helpers.js";
 
+const body = document.body;
+const overlay = document.querySelector("[data-overlay]");
 const navbar = document.querySelector("[data-navbar]");
 const navbarMenu = document.querySelector("[data-navbar-menu]");
 const navbarToggleButton = document.querySelector(
   "[data-navbar-toggle-button]"
 );
-const overlay = document.querySelector("[data-overlay]");
 
 function toggleMenu() {
-  document.body.classList.toggle("lock");
+  body.classList.toggle("lock");
   overlay.classList.toggle("active");
   navbarMenu.classList.contains("open")
     ? navbarToggleButton.setAttribute("aria-expanded", "false")
@@ -24,11 +25,9 @@ window.addEventListener(
   "resize",
   debounce(() => {
     if (window.innerWidth >= 768) {
-      document.body.classList.remove("lock");
+      body.classList.remove("lock");
       overlay.classList.remove("active");
-      navbarMenu.classList.contains("open")
-        ? navbarToggleButton.setAttribute("aria-expanded", "false")
-        : navbarToggleButton.setAttribute("aria-expanded", "true");
+      navbarToggleButton.setAttribute("aria-expanded", "false");
       navbarMenu.classList.remove("open");
       navbarToggleButton.classList.remove("active");
     }
